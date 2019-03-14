@@ -34,23 +34,5 @@ class SocialController extends Controller
             return redirect()->route('home');
         }
     }
-    public function TwitterCallback()
-    {
-        $twitterSocial =   Socialite::driver('twitter')->user();
-        $users       =   User::where(['email' => $twitterSocial->getEmail()])->first();
-        if($users){
-            Auth::login($users);
-            return redirect('/home');
-        }else{
-            dd($twitterSocial);
-            $user = User::firstOrCreate([
-                'name'          => $twitterSocial->getName(),
-                'email'         => $twitterSocial->getEmail(),
-                'image'         => $twitterSocial->getAvatar(),
-                'provider_id'   => $twitterSocial->getId(),
-                'provider'      => 'twitter',
-            ]);
-            return redirect()->route('home');
-        }
-    }
+
 }

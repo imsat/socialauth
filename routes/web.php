@@ -22,5 +22,4 @@ Route::get('/privacy', 'HomeController@privacy')->name('privacy');
 
 Route::get('login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@callback');
-//Route::get('login/twitter/callback', 'SocialController@TwitterCallback');
 

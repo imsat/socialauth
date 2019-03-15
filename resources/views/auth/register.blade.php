@@ -69,10 +69,13 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-5">
+                            <div class="col-md-12 offset-md-2 mt-5">
                                 <p>Or login with
-                                <a href="{{ url('/login/facebook') }}" class="btn btn-primary"> Facebook</a>
-                                <a href="{{ url('/login/twitter') }}" class="btn btn-info"> Twitter</a>
+                                    <a href="{{ url('/login/facebook') }}" class="btn btn-primary"> Facebook</a>
+                                    <a href="{{ url('/login/twitter') }}" class="btn btn-info"> Twitter</a>
+                                    <a href="{{ url('/login/github') }}" class="btn btn-info"> Github</a>
+                                    <a href="{{ url('/login/google') }}" class="btn btn-danger"> Google</a>
+                                    <a href="{{ url('/login/linkedin') }}" class="btn btn-warning"> Linkedin</a>
                                 </p>
                             </div>
                         </div>
